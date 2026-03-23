@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XYZ AI - Chat Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="profile-section">
+                <img src="/assets/profile.jpg" alt="XYZ AI" class="profile-img">
+                <h1 class="ai-name">XYZ AI</h1>
+                <p class="ai-subtitle">Advanced Chat Assistant</p>
+            </div>
+            
+            <div class="new-chat-btn">
+                <button onclick="startNewChat()">
+                    <span>➕</span> New Chat
+                </button>
+            </div>
+
+            <div class="chat-history">
+                <h3>Recent Chats</h3>
+                <div id="chatHistoryList"></div>
+            </div>
+        </div>
+
+        <!-- Main Chat Area -->
+        <div class="main-content">
+            <div class="chat-header">
+                <h2>XYZ AI Chat</h2>
+                <div class="header-actions">
+                    <button class="icon-btn" title="Settings">⚙️</button>
+                    <button class="icon-btn" title="Help">❓</button>
+                </div>
+            </div>
+
+            <!-- Messages Container -->
+            <div class="messages-container" id="messagesContainer">
+                <div class="message-group welcome">
+                    <div class="message ai-message">
+                        <div class="message-content">
+                            <p>👋 Hello! I'm XYZ AI, your advanced chat assistant.</p>
+                            <p>How can I help you today?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Input Area -->
+            <div class="input-section">
+                <div class="input-wrapper">
+                    <textarea 
+                        id="chatInput" 
+                        class="chat-input" 
+                        placeholder="Type your message here... (Press Enter to send)"
+                        rows="1"
+                    ></textarea>
+                    <button class="send-btn" id="sendBtn" onclick="sendMessage()">
+                        <span class="send-icon">➤</span>
+                    </button>
+                </div>
+                <p class="input-hint">Press <strong>Shift + Enter</strong> for new line</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
